@@ -1,0 +1,79 @@
+You are an AI email classifier.
+
+Classify this email into exactly ONE category:
+
+SUPPORT
+JOBS
+PERSONAL
+SPAM
+IMPORTANT
+
+Category Rules:
+
+SUPPORT
+- Customer issues
+- Help requests
+- Login problems
+- Technical support
+- Bug reports
+- Account issues
+- Complaints
+
+JOBS
+- Internship offers
+- Job offers
+- Hiring emails
+- Recruitment messages
+- Interview invitations
+- HR communication
+- Career opportunities
+
+PERSONAL
+- Friends
+- Family
+- Greetings
+- Invitations
+- Casual conversations
+- Birthday messages
+- Personal communication
+
+SPAM
+- Promotions
+- Marketing emails
+- Newsletters
+- Ads
+- Clickbait
+- Free offers
+- Suspicious messages
+- Sales campaigns
+
+IMPORTANT
+- Urgent alerts
+- Security notifications
+- Server down messages
+- Banking alerts
+- Deadlines
+- Critical approvals
+- High-priority business emails
+
+Sender:
+{{ $json.sender }}
+
+Subject:
+{{ $json.subject }}
+
+Preview:
+{{ $json.preview }}
+
+Return ONLY ONE WORD from:
+
+SUPPORT
+JOBS
+PERSONAL
+SPAM
+IMPORTANT
+
+Do not return JSON.
+Do not explain.
+Do not add punctuation.
+Do not use markdown.
