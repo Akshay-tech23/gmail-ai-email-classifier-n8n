@@ -204,7 +204,7 @@ Through this project I learned:
 Akshay A
 
 LinkedIn:  
-https://www.linkedin.com/in/akshay-a-1b4960283
+https://www.linkedin.com/in/akshay-a-dev
 
 GitHub:  
 https://github.com/Akshay-tech23
