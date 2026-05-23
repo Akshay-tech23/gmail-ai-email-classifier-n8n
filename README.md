@@ -1,20 +1,22 @@
 # 📧 Gmail AI Email Classifier using n8n + OpenAI
 
-An AI-powered Gmail automation workflow built with n8n and OpenAI that automatically classifies incoming emails into categories like:
+An AI-powered Gmail automation workflow built using **n8n** and **OpenAI** that automatically classifies incoming emails into intelligent Gmail categories.
 
-- AI-JOBS
-- AI-SPAM
-- AI-IMPORTANT
-- AI-PERSONAL
-- AI-SUPPORT
+![Demo](assets/demo.gif)
 
-The workflow reads incoming Gmail messages, uses AI to analyze the subject and preview content, and automatically adds Gmail labels based on the detected category.
+---
+
+## 🎥 Demo Video
+
+Watch the full project demo on YouTube:
+
+https://youtu.be/Vq5AoE36jwg
 
 ---
 
 # 🚀 Features
 
-✅ Real-time Gmail email monitoring  
+✅ Real-time Gmail monitoring  
 ✅ AI-powered email classification  
 ✅ Automatic Gmail label assignment  
 ✅ Spam email detection  
@@ -30,55 +32,83 @@ The workflow reads incoming Gmail messages, uses AI to analyze the subject and p
 - n8n
 - OpenAI API
 - Gmail API
-- AI Prompt Engineering
+- Prompt Engineering
 - Workflow Automation
+- AI Classification
 
 ---
 
-# 🧠 AI Categories
+# 🧠 Email Categories
 
 | Category | Description |
-|---|---|
-| JOBS | Internship, hiring, recruitment emails |
-| SPAM | Promotions, fake offers, marketing spam |
-| IMPORTANT | Urgent alerts, server issues, approvals |
-| PERSONAL | Friends, family, personal communication |
-| SUPPORT | Customer issues, complaints, login issues |
+|-----------|-------------|
+| JOBS | Internships, recruitment, hiring emails |
+| SPAM | Promotions, ads, suspicious emails |
+| IMPORTANT | Urgent alerts, approvals, critical updates |
+| PERSONAL | Friends, family, casual communication |
+| SUPPORT | Help requests, complaints, account issues |
 
 ---
 
 # 🔄 Workflow Architecture
 
-![Workflow Architecture](screenshots/Workflow-Architecture.png)
+```text
+Gmail Trigger
+     ↓
+Extract Email Fields
+     ↓
+OpenAI Classification
+     ↓
+Merge Classification
+     ↓
+Route By Category
+     ↓
+Apply Gmail Labels
+```
+
+---
+
+## Workflow Screenshot
+
+![Workflow](screenshots/Workflow.png)
 
 ---
 
 # 📬 Gmail Auto Classification
 
-![Gmail Labels](screenshots/Gmail-Labels.png)
+## Gmail Labels Applied
+
+![Labels](screenshots/Gmail%20Labels.png)
 
 ---
 
-# 💼 Job Email Detection
+## Job Email Detection
 
-![Job Email Classification](screenshots/Job-Email-Classification.png)
+![Jobs](screenshots/Job-Email-Classification.png)
 
 ---
 
-# 🧩 Workflow Logic
+## Important Email Detection
 
-1. Gmail Trigger detects new incoming email
-2. Extract Email Fields node gets:
-   - Sender
-   - Subject
-   - Preview
-3. OpenAI classifies the email
-4. Router node redirects based on category
-5. Gmail automatically adds labels
+![Important](screenshots/Imporant-Email-Classification.png)
+
+---
+
+## Support Email Detection
+
+![Support](screenshots/Support-Email-Classification.png)
 
 ---
 
 # 🤖 AI Prompt Used
+
+Stored inside:
+
+```text
+prompt/classifier_prompt
+```
+
+Core Prompt:
 
 ```txt
 Classify this email into exactly one category:
@@ -108,20 +138,39 @@ Do not use markdown.
 
 ---
 
+# 🧩 Workflow Logic
+
+1. Gmail Trigger listens for incoming emails
+2. Extract Email Fields node extracts:
+   - Sender
+   - Subject
+   - Preview
+3. OpenAI classifies the email
+4. Router redirects by category
+5. Gmail labels are automatically assigned
+
+---
+
 # 📁 Project Structure
 
 ```bash
-gmail-ai-email-classifier/
+gmail-ai-email-classifier-n8n/
 │
 ├── README.md
-├── Workflow.json
+│
+├── assets/
+│   ├── demo.gif
+│   └── thumbnail.png
+│
+├── prompt/
+│   └── classifier_prompt
 │
 ├── screenshots/
-│   ├── Workflow-Architecture.png
-│   ├── Gmail-Labels.png
+│   ├── Workflow.png
+│   ├── Gmail Labels.png
 │   ├── Job-Email-Classification.png
-│
-└── assets/
+│   ├── Imporant-Email-Classification.png
+│   └── Support-Email-Classification.png
 ```
 
 ---
@@ -129,11 +178,24 @@ gmail-ai-email-classifier/
 # 📌 Future Improvements
 
 - Auto reply generation
+- AI email summaries
+- Sentiment analysis
+- Slack / Telegram notifications
 - Priority scoring
-- AI summary generation
-- Telegram/Discord notifications
-- Email sentiment analysis
 - Multi-language email support
+
+---
+
+# 📚 Learning Outcomes
+
+Through this project I learned:
+
+- AI workflow automation
+- Gmail API integration
+- Prompt engineering
+- Event-driven automation
+- n8n orchestration
+- AI classification systems
 
 ---
 
@@ -141,6 +203,8 @@ gmail-ai-email-classifier/
 
 Akshay A
 
-LinkedIn: www.linkedin.com/in/akshay-a-1b4960283
+LinkedIn:  
+https://www.linkedin.com/in/akshay-a-1b4960283
 
-GitHub: https://github.com/Akshay-tech23
+GitHub:  
+https://github.com/Akshay-tech23
